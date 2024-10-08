@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #ff9800;
+    text-align: center;
+}
+
+#shift-info, #product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff9800;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background-color: #ff9800;
+    border: none;
+    cursor: pointer; /* Додаємо курсор для кнопки */
+    transition: background-color 0.3s; /* Додаємо плавний перехід */
+}
+
+button:hover {
+    background-color: #e68900; /* Колір при наведенні */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex; /* Додаємо гнучке відображення */
+    justify-content: space-between; /* Розміщуємо елементи по краях */
+    align-items: center; /* Вирівнюємо вертикально */
+}
+
+/* Зменшення розміру кнопки "Видалити" та відступ */
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Зменшення відступу */
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Додаємо плавний перехід */
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a; /* Колір кнопки "Видалити" при наведенні */
+}
+
+/* Групування назви продукту, типу та кількості */
+.product-name, .product-type {
+    margin-right: 5px;
+}
+
+.quantity {
+    font-weight: bold;
+}
+
+/* Для гарного відображення на телефонах */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    #shift-info, #product-info {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    input, select, button {
+        width: 100%;
+    }
+
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-button {
+        margin-top: 5px;
+        align-self: flex-end; /* Вирівнюємо кнопку по правому краю */
+        width: auto; /* Встановлюємо автоматичну ширину */
+        padding: 5px 10px; /* Залишаємо попередні відступи */
+    }
+
+    li {
+        flex-direction: column; /* Розташовуємо елементи вертикально */
+        align-items: flex-start; /* Вирівнюємо по лівому краю */
+    }
+}

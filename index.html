@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Облік продукції</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Облік продукції</h1>
+
+    <div id="shift-info">
+        <label for="shiftStart">Початок зміни:</label>
+        <input type="time" id="shiftStart" value="10:30">
+
+        <label for="shiftEnd">Кінець зміни:</label>
+        <input type="time" id="shiftEnd" value="19:00">
+
+        <label for="breakTime">Перерва (хв):</label>
+        <input type="number" id="breakTime" value="0" min="0">
+    </div>
+
+    <div id="product-info">
+        <label for="product">Продукт:</label>
+        <select id="product">
+            <option value="паннакотики">Паннакотики</option>
+            <option value="трайфли">Трайфли</option>
+            <option value="сендвічі">Сендвічі</option>
+            <option value="чізкейки">Чізкейки</option>
+            <option value="котики">Котики</option>
+        </select>
+
+        <div id="typeSection">
+            <label for="type">Тип:</label>
+            <select id="type"></select>
+        </div>
+
+        <label for="quantity">Кількість:</label>
+        <input type="number" id="quantity" min="1">
+        <button id="addProduct">Додати продукт</button>
+    </div>
+
+    <h2>Історія обліку</h2>
+    <ul id="logList"></ul>
+
+    <button id="copyShiftButton">Скопіювати Зміну</button> <!-- Додано кнопку -->
+
+    <script src="script.js"></script>
+</body>
+</html>
