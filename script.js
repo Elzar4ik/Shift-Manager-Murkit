@@ -174,7 +174,6 @@ document.getElementById("copyShiftButton").addEventListener("click", function ()
     copyText += `Час зміни: ${shiftStart} - ${shiftEnd}\n`;
     copyText += `Перерва: ${breakTime} хв\n`;
     copyText += `Робочі години: ${workHours} год.\n\n`; // Додаємо пробіл
-    copyText += "Продукти:\n";
     copyText += logEntries.join("\n"); // Додаємо всі продукти
 
     // Копіюємо текст в буфер обміну
